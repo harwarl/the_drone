@@ -4,7 +4,7 @@ services:
     container_name: the_drone
     restart: always
     ports:
-      - '3000:3000'
+      - '4500:4500'
     depends_on:
       - mongo
     env_file:
