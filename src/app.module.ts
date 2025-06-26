@@ -6,6 +6,7 @@ import { DatabaseModule } from './database/database.module';
 import { ConfigModule } from '@nestjs/config';
 import * as Joi from 'joi';
 import { ENV_FILE_PATH } from 'utils/constants';
+import { MedicationModule } from './medication/medication.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { ENV_FILE_PATH } from 'utils/constants';
     }),
     DroneModule,
     DatabaseModule,
+    MedicationModule,
   ],
   controllers: [AppController],
   providers: [AppService],
