@@ -1,0 +1,30 @@
+DRONE Schema 
+
+
+Assumming a one to many relationship with the medications 
+
+Drone Doc
+->> Serial Number
+->> model
+->> weight_limit   0.5kg max per drone
+->> no_of_medications
+->> current_load_weight
+->> battery_level.  min being 0 and max being 100
+->> state {idle, loading, loaded, delivering, delivered, returning}
+->> _id. { doc Id }
+
+
+Medication Doc 
+->> drone_id {for faster queries}
+->> name {identifier for medication}
+->> weight 
+->> code {for deliveries}
+->> image_url
+
+
+Drone_logs
+->> drone_id
+->> battery_level
+->> current_no_of_meditions
+->> drone_state
+->> _id
