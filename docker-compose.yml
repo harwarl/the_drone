@@ -1,4 +1,15 @@
 services:
+  the_drone:
+    build: .
+    container_name: the_drone
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - mongo
+    env_file:
+      - .env
+
   mongo:
     image: mongo
     restart: always
