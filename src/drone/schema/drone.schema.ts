@@ -1,15 +1,6 @@
 import { timeStamp } from 'console';
 import mongoose from 'mongoose';
 
-enum STATE {
-  idle,
-  loading,
-  loaded,
-  delivering,
-  delivered,
-  returning,
-}
-
 export const DroneSchema = new mongoose.Schema(
   {
     serial_number: String,
@@ -24,6 +15,3 @@ export const DroneSchema = new mongoose.Schema(
     timestamps: true,
   },
 );
-
-
-

@@ -13,7 +13,7 @@ import { MedicationModule } from './medication/medication.module';
     ConfigModule.forRoot({
       isGlobal: true,
       validationSchema: Joi.object({
-        DB_URL: Joi.string().required(),
+        MONGO_URI: Joi.string().required(),
       }),
       envFilePath: ENV_FILE_PATH,
     }),

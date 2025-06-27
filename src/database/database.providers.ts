@@ -8,7 +8,7 @@ export const databaseProviders = [
       configService: ConfigService,
     ): Promise<typeof mongoose> => {
       try {
-        const uri = configService.get<string>('DB_URL');
+        const uri = configService.get<string>('MONGO_URI');
         if (!uri) {
           throw new Error('DB URL is not defined in the environment variables');
         }

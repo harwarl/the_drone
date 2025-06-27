@@ -3,11 +3,13 @@ import mongoose from 'mongoose';
 
 export const MedicationSchema = new mongoose.Schema(
   {
-    drone_id: String,
+    droneId: String,
     name: String,
     weight: Number,
     code: String,
     image_url: String,
+    destination: String,
+    status: MEDICATION_STATUS,
   },
   {
     timestamps: true,
